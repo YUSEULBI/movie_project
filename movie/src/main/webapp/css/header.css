@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '87MMILSANG-Oblique';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201@1.0/87MMILSANG-Oblique.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*--------- 공통 --------------*/
+*{
+	margin:0px;
+	padding: 0px;
+	list-style-type: none;
+	font-family: 'SUIT-Regular';
+}
+
+a{
+	text-decoration: none !important;
+	color : white;
+}
+
+body{
+	background-color: #002338;
+	color: white;
+}
+
+.wrap{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/*--------- 색상테마 --------------*/
+
+/* Color Theme Swatches in Hex */
+.RA-Webpage-0-hex { color: #002338; }
+.RA-Webpage-1-hex { color: #00263D; }
+.RA-Webpage-1-hex { color: #022842; }
+.RA-Webpage-2-hex { color: #02FCFF; }
+.RA-Webpage-3-hex { color: #0080A3; }
+.RA-Webpage-4-hex { color: #00B4DE; }
+.RA-Webpage-4-hex { color: #033252; }
+
+.RA-Webpage-5-hex { color: #00456B; }
+.RA-Webpage-6-hex { color: #B3FF00; }
+
+
+/* rgb */
+.RA-Webpage-0-hex { color: rgb(0,35,56); }
+.RA-Webpage-1-hex { color: #00263D; }
+.RA-Webpage-1-hex { color: #022842; }
+.RA-Webpage-2-hex { color: #02FCFF; }
+.RA-Webpage-3-hex { color: #0080A3; }
+.RA-Webpage-4-hex { color: #00B4DE; }
+.RA-Webpage-5-hex { color: #00456B; }
+.RA-Webpage-6-hex { color: #B3FF00; }
+
+
+/*-----------헤더 ---------------------*/
+
+.header{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 60px;
+	margin-top: 20px;
+}
+
+
+
+/*-----------헤더 로고 ------------------*/
+.logodiv{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	position: relative;
+}
+
+.logo{
+	width: 270px;
+	margin: 2% 1% 0% 1%;
+}
+
+.logo img{
+	width: 100%;
+}
+.profileimgdiv{
+	margin-bottom: 5px;
+}
+
+.profileimg{ /*프로필 이미지*/
+	position : absolute;
+	top : 35px;
+	right : 0px;
+	
+	width: 40px;
+	height: 40px;
+	object-fit : cover;
+	border-radius: 8px;
+	background-color: white;
+}
+
+.profileimg:hover{
+	cursor: pointer;
+}
+
+/*-----------드롭다운 ---------------------*/
+.dropdown_menu{
+	position: absolute;
+	top: 82px;
+	right: 0px;
+	
+	background-color: #00456B;
+	border-radius : 8px;
+	padding: 3px;
+	display: none;
+	
+	z-index: 999;
+}
+
+.dropdown_li{
+	margin: 15px;
+}
+
+/*--------------------------------------*/
+
+
+.submenumargin{
+	margin-right: 20px;	
+}
+
+
+
+/*
+.line{
+	width: 100%;
+	height: 5px;
+	border-bottom: 1px solid #00456B;
+	margin: 10px 0px 20px 0px;
+}
+*/
+
+/*-----------헤더 메뉴 ------------------*/
+.menu{
+	width: 100%;
+	display: flex;
+	position: relative;
+}
+
+.mainmenu{ /*메인메뉴*/	
+	width: 100%; 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 15px 0 0 0px !important; /* 부트스트랩 여백 제거 */
+	background-color: #033252;
+	padding: 20px;
+	border-radius: 10px;	
+} 
+.mainmenu a{
+	margin: 0 20px;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.mainmenuleft{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.mainmenuright{
+/* 	display: flex; */
+	display : none;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.verticalBar{
+	font-size: 17px;
+	color: #00456B;
+}
+
+.submenu{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	right: 0px;
+	top: 0px;
+}
+
+

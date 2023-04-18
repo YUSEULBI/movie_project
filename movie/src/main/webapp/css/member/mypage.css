@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+/* .header{ */
+/* 	margin-bottom: 30px !important; */
+/* } */
+
+
+/* .mypagebackground{ */
+/* 	width:100%; */
+/* 	height: 100%; */
+/* 	background-color: #00456B; */
+/* 	display: flex; */
+/* 	justify-content: center; */
+/* 	padding-top: 50px; */
+/* } */
+.test{
+	width: 100%;
+}
+.mypageinfo{
+	background: linear-gradient(to right, #00456B, #00B4DE );
+	background-color: #00456B;
+	border-radius: 15px;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	padding: 20px 30px;
+	margin-bottom: 25px;
+}
+
+/*서브제목*/
+.mypagesubbanner{
+	background: linear-gradient(to right, #00456B, #033252);
+	justify-content: space-between;
+}
+
+/*-------------예약페이지---------------*/
+
+.reservation{
+	width: 100%;
+	height: 405px;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 60px; 
+	border-radius: 10px;
+}
+
+/* 슬라이더 버튼 */
+.sliderleftbtn , .sliderrightbtn{
+	position: absolute;
+	top: 125px;
+	z-index: 999;
+	color: white;
+	font-size: 80px;
+	opacity:50%;
+	/*드래그 방지*/
+	-webkit-user-select: none;
+ 	-moz-user-select: none;
+ 	-ms-use-select: none;
+ 	user-select: none;
+}
+.sliderleftbtn{ left:20px; }
+.sliderrightbtn{ right:20px; }
+
+/* 슬라이더 버튼 호버 */
+.sliderleftbtn:hover , .sliderrightbtn:hover{
+	cursor: pointer;	
+}
+
+.rightshadow , .leftshadow{
+	position: absolute;
+	bottom: 0px;
+	border-radius: 9px;
+/* 	opacity: 80%; */
+	z-index: 998;
+}
+.rightshadow{
+	right:0px;
+	display: none;
+}
+.leftshadow{
+	left:0px;
+	display: none;
+}
+
+.rightmouseover , .leftmouseover{
+	width: 100px;
+	height: 405px;
+/* 	border: 1px solid white; */
+	position: absolute;
+	z-index: 1500;
+}
+
+.rightmouseover{
+	right: 0px;
+}
+
+.leftmouseover{
+	left: 0px;
+}
+
+/* 마우스오버div 호버 */
+.rightmouseover:hover , .leftmouseover:hover{
+	cursor: pointer;	
+}
+
+.reservationDiv{
+	display: flex;
+	overflow: hidden;
+	position:absolute;
+	left:0px;
+	transition : all 0.4s;
+}
+
+.oneReservation{
+	background-repeat: no-repeat;
+	min-width: 285px;
+	width: 285px;
+	height: 405px;
+	background-size: 100%;
+	border-radius: 10px;
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+	margin-right: 20px;
+}
+
+
+.reinfo{
+/* 	color: black !important; */
+	width: 219px;
+	padding: 30px 30px;
+	z-index: 999;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.reinfogradient{
+	position: absolute;
+	bottom: 0px;
+	border-radius: 9px;
+	opacity: 80%;
+}
+
+.title{
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.screeninfo{
+	display: flex;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.rinfotext{
+	margin-top: 5px;
+	font-size: 15px;
+}
+.seatnum{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+/* 회원정보수정 */
+.signupForm{
+	transition : all 0.4s;
+}

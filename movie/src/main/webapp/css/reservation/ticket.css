@@ -1,0 +1,293 @@
+@charset "UTF-8";
+
+*{
+	box-sizing: border-box;
+	margin:0px
+}
+
+.t_wrap{
+	width:70%;
+	margin:0px auto;
+}
+
+/* ------------------------상단 ----------------- */
+.ticket_top{
+	width:100%;
+	color:black; 
+}
+ 
+/* 상단 제목 */
+.top_title{
+	width: 100%;
+	background-color: #939393;
+	text-align: center;
+	padding: 20px;
+    font-size: 20px; 
+}
+ 
+.top_content{
+	width: 100%;
+	display:flex;
+	background-color: white;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* 영화 이미지 */
+.movie_img{
+	width:12%; 
+	display: flex;
+}
+
+.movie_img img, .movie_info2_img img{
+	width:100%;
+}
+
+/* 상단 영화 정보란 */
+.movie_info{
+	padding: 30px;
+	color:black;
+}
+
+/* 영화 제목 */
+.movie_title{
+	font-size: 24px;
+    font-weight: bold;
+    margin-bottom:5px;
+}
+
+/* 날짜,시간 , 상영관 정보 */
+.date, .time, .screen{
+	font-size: 15px;
+	margin: 0px 10px
+}
+
+/* 날짜 */
+.date{
+	margin-left:0px;
+}
+
+/* 성인, 청소년, 시니어 */
+.age{
+	width: 60px;
+	font-weight: bold;
+	margin-right: 15px
+}
+
+/* 인원선택란 */
+.movie_people{
+	display:flex;
+	margin-right: 50px;
+	width:150px;
+	align-items: center;
+}
+
+/* 인원선택 버튼 */
+.people button{
+	border:0px;
+	background-color: white;
+	font-size:20px;
+	padding:  10px;
+	cursor: pointer;
+}
+
+/* 인원선택 버튼 2 */
+.people{
+	width:120px;
+	font-size:19px;
+    border: 1px solid #c9c9c9;
+}
+
+.screen_box{
+	width: 50px;
+    text-align: center;
+    padding: 10px;
+    background:  #939393;
+    color: black;
+    margin:10px 0px 17px 0px;
+}
+
+
+/* ---------------------------중단------------------ */
+.middle{
+	background-color: black;
+	padding-bottom: 150px;
+}
+
+/* screen 텍스트 */
+.screen{
+	width: 100%;
+    text-align: center;
+    padding: 10px;
+    background:  #939393;
+    color: black;
+    margin:50px 0px 0px 0px;
+    letter-spacing: 15px;
+   
+}
+
+/* 좌석선택공간 */
+.select_seat{
+	background-color: black;
+	width:100%;
+	padding:20px;
+	padding-top:100px;
+}
+
+/* 알파벳 열 */
+.col{
+	margin-right: 20px;
+    padding-bottom: 20px;
+    width: 10px;
+}
+
+/* 좌석전체 */
+.seat_text{
+    margin-top: 10px 0px;
+    display:flex;
+    justify-content: space-between;
+}
+
+/* 왼족 좌석 */
+.left{    
+	margin-right: 60px;
+    width: 150px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* 중앙 좌석 */   
+.center{ 
+	margin-right: 30px;
+	width:450px;
+    display: flex;
+    justify-content: center;
+ }
+ 
+ /* 오른쪽 좌석 */
+.right{
+	width:150px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* 전체좌석 */
+.seat{   
+	padding: 3px;
+    text-align: center;
+    margin: 3px;
+    cursor: pointer;
+    width:30px;
+    background-color: #E8E8E8;
+    color:black;
+}
+
+/* 하단 결제 */
+.paybox{
+	width: 100%;
+    background-color: gray;
+    height: 100px;
+    display:flex;
+    align-items: center;
+    font-size: 23px;
+    padding-left: 40px;
+    justify-content: space-between;
+}
+
+/* 결제금액 */
+.pay_money{
+	font-size: 32px;
+    margin: 0px 5px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+/* 결제버튼 */
+.paybtn{
+	width: 15%;
+    height: 100%;
+    font-size: 23px;
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+
+/*------------------------결제 창--------------------  */
+/*모달 배경*/
+.modal_wrap{
+	background-color:rgba(196,188,188,50%);
+	position: fixed;
+	top : 0; left: 0;
+	width: 100%; height: 100%;
+	justify-content: center; align-items: center;
+	display: none;
+	color:black;
+}
+
+/*모달 상자*/
+.modal_box{
+	background-color: #E8E8E8;
+	width: 50%;
+	padding: 3% 1%;
+	border: 3px solid black;
+	border-radius: 30px;
+}
+
+/* 모달 전체 내용 */
+.modal_content{
+	display:flex;
+	justify-content: space-evenly;
+	flex-direction:  row;
+}
+
+/* 모달 버튼 전체  */
+.modal_btns{
+	text-align: right;
+	padding-right: 60px;
+}
+
+
+/*모달 버튼*/
+.modal_btns button{
+	border: none;
+	background-color: #F44336;
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+/*	*/
+.modal_time , .modal_date{
+	font-size:17px;
+}
+
+/* 인원, 좌석, 금액 (상단)*/
+.pay_people, .s_seat, .pay_money3 {
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+/* 인원, 좌석, 금액 (모달)*/
+.pay_people2, .s_seat2 , .pay_money2{
+	margin-left:10px;
+}
+
+.pay_money2{
+	font-weight: bold;
+}
+
+
+.movie_info2{
+	padding: 30px;
+	color:black;
+	border-left: 1px solid #d1d1d1;
+    margin-right: 12px;
+    margin-bottom: 20px;
+    padding-left: 70px;
+}
+
+/* 모달이미지 */
+.movie_info2_img{
+	width:30%;
+}

@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+.container{
+	display: flex;
+  justify-content: center;
+}
+
+.m_title{
+	text-align: center;
+	margin: 2%;
+}
+
+.css_m_p{
+	display: flex;
+	width: 1200px;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	padding: 20px;
+	background-color: #022842;
+	border: 2px solid #033252;
+	border-radius: 10px;
+
+}
+
+.css_search{
+
+	text-align: right;
+}
+
+.css_m_wrap{
+	
+	width: 16%;
+	margin: 20px 20px;
+}
+
+.css_m_wrap img{
+	max-width: 100%;
+	width: auto !important;
+	height: auto;
+	border-radius: 20px;
+	
+}
+
+/*모달 배경*/
+.modal_wrap{
+	background-color:  silver;
+	opacity: 0.9;
+	position: fixed;
+	top : 0; left: 0;
+	width: 100%; height: 100%;
+	justify-content: center; align-items: center;
+	display: none;
+}
+
+
+
+/*모달 상자*/
+.modal_box{
+	background-color: #002338;
+	opacity: 1;
+	width: 800px;
+	padding: 5%;
+	border: 3px solid black;
+	border-radius: 30px;
+	display: flex;
+	justify-content: space-between;
+	height: 700px; 
+	overflow : auto;
+	position: relative;
+		
+}
+
+.modal_box::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+
+
+/*모달 버튼*/
+.modal_btns button{
+	border: none;
+	background-color:#002338;
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+	position: static;
+	
+	
+}
+
+.review_container{
+	width : 100%;
+	border: 2px solid silver;
+	border-radius: 15px;
+	padding: 10px;
+	
+}
+.review_print{
+	width : 100%;
+	border: 2px solid silver;
+	border-radius: 15px;
+	padding: 10px;
+}
+
+
+.review_list{
+	display: flex;
+	margin: 5px 0;
+}
+
+.b_mid{
+	font-size: 18px;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+.b_bscore{
+	font-size: 18px;
+	margin-right: 10px;
+}
+
+.b_bdate{
+	font-size: 12px;
+}
+
+.modal_wrap2{
+	background-color:  silver;
+	position: fixed;
+	top : 0; left: 0;
+	width: 100%; height: 100%;
+	justify-content: center; align-items: center;
+	display: none;
+}
+
+/*모달 상자*/
+.modal_box2{
+	background-color: #002338;
+	width: 30%;
+	padding: 5%;
+	border: 3px solid black;
+	border-radius: 30px;
+	
+}
+
+/*모달 버튼*/
+.modal_btns2 button{
+	border: none;
+	background-color:#00456B;
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+	
+	
+}
+
+
+.movie_info{
+	width: 35%;
+}
+
+.review_info{
+	width: 55%;
+}
+
+.css_review_list{
+	margin-left: 60px;
+}
+
+
+.writeForm{
+	padding: 5px;
+}
+
+.inputcss{
+	width: 30%;
+	padding: 5px 5px;
+	background-color: #00456B !important;
+	border: none;
+	color: white;
+	border-radius: 10px;
+}
+
+.css_textarea{
+	padding: 5px 5px;
+	background-color: #00456B !important;
+	border: none;
+	color: white;
+	border-radius: 10px;
+	margin: 10px 0;
+}
+
+.css_btn{
+		border: none;
+	background-color:#00456B;
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 5px 0;
+}
+
+.find_user{
+	font-size: 18px;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+.find_rdate{
+	font-size: 12px;
+}
+
+.css_review_list{
+	background-color: #00456B;
+	padding: 2%;
+	border-radius: 10px;
+	margin-bottom: 2%;
+}
+
+.inputcss2{
+	width: 15%;
+	padding: 5px 5px;
+	background-color: #00456B !important;
+	border: none;
+	color: white;
+	border-radius: 10px;
+}
+
+
+
+
+
+
+
+

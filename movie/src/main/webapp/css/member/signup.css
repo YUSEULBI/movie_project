@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+.title{
+	font-size: 22px;
+}
+
+
+
+.wrapdiv{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.inputtitle{
+	margin-top: 40px;
+	font-size: 18px;
+	padding-left: 3px;	
+}
+
+.inputdiv{
+	background-color: #033252;
+	width:400px;
+	padding: 5px 20px;
+	border-radius: 5px;
+	border: 1px solid #033252;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px 0px;
+}
+
+.inputcss{
+	width: 100%;
+	padding: 5px 5px;
+	background-color: transparent !important;
+	border: none;
+	color: white;
+}
+.inputcss:hover{
+	outline: none;
+	color: white;
+}
+.inputcss:focus{
+	outline: none;
+	color: white;
+}
+
+.confirminput{
+	color: red;
+	font-size: 13px;
+}
+
+.newmimg{
+	border-radius: 50px;
+	margin: 15px 0px;
+	background: white;
+}
+
+.btndiv{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.btncss{
+	background-color: #00B4DE;
+	border: none;
+	padding: 10px 10px;
+	border-radius: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	width: 100%;
+	margin-top: 50px;
+	color: #00456B;
+}
+
+/*--------로그인페이지-----------*/
+.finddiv{
+	margin-top: 20px;
+
+}
+.findatag{
+	margin: 10px;
+	color: #00B4DE;
+}
+
+/*----마이페이지-----*/
+.updatememberflex{
+	width: 100%;
+	display: flex;
+	justify-content: center;	
+}
+.updatememberdiv{
+	width: 441px;
+}

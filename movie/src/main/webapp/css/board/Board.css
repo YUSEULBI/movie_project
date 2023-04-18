@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+
+.board_title{
+	text-align: center;
+	margin: 2%;
+}
+
+.container{
+	display: flex;
+  justify-content: center;
+}
+
+.print_review{
+	display: flex;
+	justify-content: space-around;
+}
+
+.print_list{
+	width: 1200px;
+}
+
+.print_table{
+	width: 100%;
+}
+
+.icon{
+	text-align: right;
+	padding-right: 20px;
+}
+.reply_box{
+	width: 100%;
+}
+
+.re_btn{
+	border: none;
+	background-color: #002338;
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.print_table{
+	border-radius: 10px;
+	padding: 5px;
+	margin: 5px;
+	
+	background-color: #033252;
+	
+}
+
+.css_replybox{
+	border-radius: 10px;
+	margin: 5px;
+
+	
+}
+
+
+.css_reply_view{
+	padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+

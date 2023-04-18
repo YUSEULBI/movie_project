@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+.findidpwdiv{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+.findpwmenudiv{
+	width: 100%;
+	height: 50px;
+}
+
+.findidmenu , .findpwmenu{
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+.finddiv{
+	width: 1000px;
+	display: flex;
+	
+}
+
+.findiddiv , .findpwdiv{
+	width: 50%;
+	
+	padding: 0 50px 50px 50px;
+}
+
+.findinputdiv{
+	background-color: #033252;
+	border-radius: 10px;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.findtext{
+	width: 100%;
+	text-align: center;
+	font-size: 13px;
+
+}
+
+.findidresult{
+	text-align: center;
+	margin-top: 90px;
+}

@@ -1,0 +1,283 @@
+@charset "UTF-8";
+
+*{
+	box-sizing: border-box;
+	margin:0px;
+	padding:0px;
+	color:black;
+}
+
+/* 전체 1 */
+.wrap{	
+	width:1200px;
+}
+
+/* 전체 2 */
+.reservation_wrap{	
+	width:100%;
+}
+ 
+/*--------------------- 영화 ------------------------------*/
+
+/* 영화 제목, 날짜 선택 전체*/
+.reservation_content{
+	width:100%;
+	margin:0px auto;
+	display:flex;
+}
+
+/* 영화선택란 */
+.movie_select{
+	width:100%;
+	background-color:#F8F8F8;
+}
+
+/* 단일 영화 제목 */
+.movie_select_one{
+	display:flex;
+	width:100%;
+	text-align: center;
+	margin: 10px 0px;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+/* 영화 사진 */
+.movie_img{
+	width:18%
+}
+ 
+.movie_img img{width:100%}
+
+/* 상영중인 영화 제목 */
+.movie_title{
+	width:100%;
+	text-align: left;
+	padding:10px;
+	color:black;
+	border-right: 2px solid #959595;
+}
+
+/* 상영중인 각각의 영화 제목*/
+.one_movie_title{
+	width:60%;
+	padding:25px;
+	font-size:23px;
+	color:black;
+	font-weight: bold;
+}
+/* ------------------- 날자 ---------------------------- */
+
+/* 날짜 선택란 */
+.select_date{
+	width:100%;
+	background-color:#FFFFFF;
+}
+
+
+
+/* 클릭시 변하는 헤더 */
+.movie_select_font, .date_font {
+	box-sizing: border-box;
+	width:100%;
+	padding:3%;
+	background-color: black;
+	border: white 1px solid;
+    color: white;
+    text-align: center;
+    font-size:22px;
+}
+
+
+
+/* 날짜 출력란 */
+.date_week{
+	color:black;
+}
+
+/* 날짜 리스트 */
+.date_week_li{
+	display:flex;
+	justify-content: space-around;
+	padding:25px ;
+	font-size:15px;
+	border-bottom:2px solid black;
+}
+
+/*날짜리스트 낱개*/
+.date_week_li li{
+	display:flex;
+	flex-direction: column;
+	justify-content:space-between;
+	text-align: center;
+}
+
+/* 월 */
+.date_month{
+	font-size:12px;
+	height:16px;
+	text-align:center;
+	box-sizing: border-box;
+	
+}
+
+/*  일  */
+.date_day{
+	width:30px;
+	height:30px;
+	font-size:16px;
+	padding:5px 5px;
+	cursor:pointer;
+	margin: 7px 0px;
+}
+
+/* 요일 */
+.date_week_day{
+	font-size:14px;
+}
+
+/* 캐러셀 아이콘  */
+.carousel-control-next-icon, .carousel-control-prev-icon{
+	background-color: #8d8b8b;
+}
+
+/* 캐러셀 버튼*/
+.carousel button{
+	width:30px;
+	z-index:5;
+}
+
+/* --------------------------- 상영관 -------------------------- */
+/* 상영 영화 제목 */
+.s_movie_title{
+	padding: 15px;
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* 상영 정보 전체 */
+.date_form{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* 상영박스 */
+.date_box{
+	width: 120px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 12px;
+    margin-top: 15px;
+    margin-left: 20px;
+    border:2px solid #b7b7b7;
+    background: #f9f9f945;
+    cursor:pointer;
+}
+
+/* 상영시간 */
+.date_time{
+	font-size: 17px;
+	font-weight: bold;
+}
+
+/* 상영박스 텍스트*/
+.date_text{
+	display:flex;
+	justify-content:space-around; 
+	align-items: flex-end;
+}
+
+/* 상영관 위치 */
+.date_sno{
+	font-weight: bold;
+}
+
+/* 상영관 좌석 */
+
+.date_seat{
+	font-size: 13px;
+}
+
+/* 남은좌석 */
+.available{
+	color:green;
+	font-weight: bold;
+}
+
+.none_date{
+	text-align: center;
+    width: 70%;
+    font-size: 25px;
+    padding-top: 30px;
+ } 
+
+ /* -------------------모달 --------------------*/
+ /*모달 배경*/
+.modal_wrap{
+	background: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top : 0; left: 0;
+	width: 100%; height: 100%;
+	justify-content: center; align-items: center;
+	display: none;
+	z-index:100;
+}
+
+/*모달 상자*/
+.modal_box{
+	background-color: white;
+	width: 40%;
+	
+}
+
+/* 모달상자 제목 */
+.modal_title{
+	background:#666666;
+	color:white;
+	text-align: center;
+	padding: 15px;
+}
+
+/* 좌석 */
+.seat{
+	text-align: center;
+	padding: 35px;	
+	font-size: 20px;
+}
+
+
+/* 잔여 좌석 */
+.a_seat{
+	font-size: 35px;
+	font-weight: bold;
+}
+
+
+
+/*모달 버튼*/
+.modal_btns button{
+	border: none;
+	background-color: #F44336;
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.screen_text{
+	text-align: center;
+	letter-spacing: 5px;
+	color: #bdbdbd;
+}
+
+.modal_btns{
+	padding: 13px;
+    margin-top: 20px;
+	text-align: center;
+}
+
+.modal_btns button{
+	padding:10px;
+}
+

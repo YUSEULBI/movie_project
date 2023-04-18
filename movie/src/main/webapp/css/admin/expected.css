@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.moviebox{
+	width: 18%;
+	margin: 1%;
+	height: 400px;
+}
+.fontD{
+	font-family: 'LINESeedKR-Bd';
+}
+.dday{
+	font-family: 'LINESeedKR-Bd';
+    position: absolute;
+    z-index: 999;
+    top: 44px;
+    left: 71px;
+    font-size: 17px;
+    line-height: 1.9;
+    color: white;
+    height: 28px;
+    width: 54px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 28%;
+    background: linear-gradient(to right, #00456B, #00B4DE);
+}
+.mimg{
+	position: relative;
+    left: 50%;
+    width: 100px;
+    min-width: 100%;
+    height: 300px;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+}
+.overview{
+	overflow: hidden;
+	height: 75px;
+}
+
+.movielist{
+	margin: 5%;
+}
+.imgbox{
+	position: relative;
+}
+.dateList{
+	position: relative;
+	border: 3px solid #033252;
+    padding: 10px;
+    margin: 2%;
+}
+
+.dateinfo h5,h3{
+	font-weight: bold;
+}
+
+/*------------- 모달-------------- */
+.modal{
+	background-color: rgba(196 ,188 ,188,50%);
+	position: fixed;	/* fixed 고정위치 */
+	top : 0; left: 0;	/* 왼쪽 상단 위치 설정 */
+	width: 100%; height: 100%;	/* 모든 화면 감싸기 */
+	/* 내용물 정 가운데 배치*/
+	display: flex;
+	justify-content: center; align-items: center;
+	/* 모달 열기/닫기 -> js */
+	display: none;
+	color : black;
+}
+
+.modal_box{
+	background-color: #002338;
+    color: #eeeeee;
+    width: 59%;
+    padding: 5%;
+    border: 3px solid #1b11de;
+    border-radius: 50px;
+    position: relative;
+    top: 21%;
+    left: 20%;
+}
+
+.modal_btns button{
+	border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color : white;
+}
+.modal_title{
+	text-align: center;
+    margin-bottom: 4%;
+}
+.modal_content{
+	display: flex;
+	justify-content: space-between;
+}
+.modaloverview{
+	width: 50%;
+}
+.modalimg{
+	width: 252px;
+    height: 370px;
+}
+.modal_btns {
+	position: absolute;
+    right: 0px;
+    bottom: 0px;
+    margin: 20px;
+}
+
+.movieblock{
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
