@@ -99,15 +99,15 @@ function search_m(){
 				
 				html += `
 						<div class="m_wrap css_m_wrap" onclick="openModal('${o.link}')">
-						<a href="#">
-						<div>
-						<img class="img-fluid" src="${o.pimg}"><br/>
-						</div>
-						<div>
-						<span class="m_title">${o.title}</span><br/>
-						<span class="m_title">${o.year}</span><br/>
-						</div>
-						</a>
+							<a href="#">
+								<div>
+									<img class="img-fluid" src="${o.pimg}"><br/>
+								</div>
+								<div>
+									<span class="m_title">${o.title}</span><br/>
+									<span class="m_title">${o.year}</span><br/>
+								</div>
+							</a>
 						</div>
 						`
 			})
