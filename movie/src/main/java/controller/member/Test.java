@@ -80,25 +80,40 @@ public class Test {
 			LocalDate releasedate = LocalDate.now().minusDays(Integer.parseInt(stringReleaseDate)+1);
 			System.out.println(releasedate);
 			
-			
+				// 감독 구하기 ////
+			String director = "";
+			Elements crewlist = doc.select(".css-qkf9j");
+			for( int c = 0 ; c < crewlist.size() ; c++ ) {
+				if ( crewlist.get(c).select(".css-1evnpxk-StyledSubtitle").text().equals("감독") ) {
+					director = crewlist.get(c).select(".css-17vuhtq").text();
+					break;
+				}
+			}
+			System.out.println(director);
 			
 			
 				// [상세페이지-기본정보더보기] https://pedia.watcha.com/ko-KR/contents/영화식별번호/overview
 			doc = Jsoup.connect("https://pedia.watcha.com"+contentslink+"/overview").get();
 			Elements infolist= doc.select(".e1kvv3953");
 			
+			//원제
 			String originaltitle = infolist.get(0).text();		System.out.println(originaltitle);
+			//개봉년도
 			String releaseyear = infolist.get(1).text();		System.out.println(releaseyear);
+			//개봉국가
 			String country = infolist.get(2).text();			System.out.println(country);
+			//장르
 			String genre = infolist.get(3).text();				System.out.println(genre);
+			//상영시간
 			String runningtime = infolist.get(4).text();		System.out.println(runningtime);
+			//관람연령등급
 			String age = infolist.get(5).text();				System.out.println(age);
 			
 			String summary = doc.select(".e1kvv3954").first().text();	System.out.println(summary);
 			
 			
 			
-		}
+		} // for문 종료
 		
 	}
 
