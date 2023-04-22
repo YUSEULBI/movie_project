@@ -1,11 +1,13 @@
 console.log('test.js연결')
 
-let title = "웅남이"
-$.ajax({
-	url : "/movie/search/poster" ,
-	method : "get" ,
-	data : { "title":title } ,
-	success : (r)=>{
-		console.log(r)
-	}
-})
+test();
+function test(){
+	console.log("test함수실행")
+	$.ajax({
+		url : "/movie/testcrawling",
+		method : "get" ,
+		success : (r)=>{
+			console.log(r)
+		} 
+	})
+}

@@ -8,6 +8,13 @@
 </head>
 <body>
 	<%@include file="/header.jsp" %>
+	
+	<div class="boxoffice">
+	
+	</div>
+	
+	<%@include file="/footer.jsp" %>
+	
 	<script src="/movie/js/member/test.js" type="text/javascript"></script>
 </body>
 </html>
