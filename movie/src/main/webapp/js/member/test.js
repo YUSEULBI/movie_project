@@ -13,6 +13,20 @@ function test(){
 	})
 }
 
+
+testkofic();
+function testkofic(){
+	console.log("testkofic함수실행")
+	$.ajax({
+		url : "/movie/testcrawling",
+		method : "get" ,
+		data : { type : 2} ,
+		success : (r)=>{
+			console.log(r)
+		} 
+	})
+}
+
 //kobisprint();
 function kobisprint(){
 	$.ajax({
@@ -27,7 +41,7 @@ function kobisprint(){
 	})
 }
 
-kobismoviesearch();
+//kobismoviesearch();
 let movielist = [] 
 function kobismoviesearch(){
 	$.ajax({

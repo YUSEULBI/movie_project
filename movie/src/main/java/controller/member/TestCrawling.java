@@ -31,7 +31,7 @@ public class TestCrawling extends HttpServlet {
 		if(type==1) {
 			Test.getInstance().test();
 		}else if( type == 2) {
-			
+			Test.getInstance().testkofic();
 		}
 		
 	}

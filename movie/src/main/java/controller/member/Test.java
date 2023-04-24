@@ -117,6 +117,16 @@ public class Test {
 			
 		} // for문 종료
 		
+	} // test end
+	
+	public void testkofic() throws IOException {
+		System.out.println("testkofic 실행");
+		Document doc = Jsoup.connect("https://kobis.or.kr/kobis/business/mast/mvie/searchMovieList.do?dtTp=movie&dtCd=20112621").get();
+		//System.out.println(doc);
+		Element select = doc.select(".item_tab").first();
+		System.out.println(select);
+		//String src = doc.select(".thumb").select("a").attr("src");
+		//System.out.println(src);
 	}
 
 }
