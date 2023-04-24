@@ -61,8 +61,10 @@ public class Test {
 			Double reservationrate = Double.parseDouble(audienceinfoarray[0].replaceAll("[^0-9.]", ""));
 			System.out.println( reservationrate );
 			// 누적관객수 : " ・ 누적 관객 601만명".split(" ")[4] => "601만명"
-			String cumulativeaudience = audienceinfoarray[1].split(" ")[4];
-			System.out.println( cumulativeaudience );
+			if ( audienceinfoarray.length > 1 ) {
+				String cumulativeaudience = audienceinfoarray[1].split(" ")[4];
+				System.out.println( cumulativeaudience );
+			}
 			
 			
 			

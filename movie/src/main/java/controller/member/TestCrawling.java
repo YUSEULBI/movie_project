@@ -26,7 +26,14 @@ public class TestCrawling extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Test.getInstance().test();
+		int type = Integer.parseInt(request.getParameter("type"));
+		System.out.println("type : "+type);
+		if(type==1) {
+			Test.getInstance().test();
+		}else if( type == 2) {
+			
+		}
+		
 	}
 
 	/**
