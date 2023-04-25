@@ -23,5 +23,9 @@
 	<classpathentry kind="lib" path="C:/jsoup.jar"/>
 	<classpathentry kind="lib" path="C:/mysql-connector-j.jar"/>
 	<classpathentry kind="lib" path="C:/selenium-server-4.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/selenium-api-4.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/selenium-chrome-driver-4.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/selenium-chromium-driver-4.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/selenium-remote-driver-4.9.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

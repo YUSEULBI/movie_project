@@ -164,11 +164,12 @@ public class Test {
 		// HTTP응답속도보다 자바의 컴파일 속도가 더 빠르기 때문에 임의적으로 1초를 대기한다.
 		try {Thread.sleep(1000); } catch (InterruptedException e) {	}
 		
+		System.out.println(driver);
 		// class="nav" 인 모든 태그를 가진 WebElement리스트를 받아온다.
 		// WebElement는 html의 태그를 가지는 클래스이다.
-		List<WebElement> el1 = driver.findElements(By.className("thumb"));
+		//List<WebElement> el1 = driver.findElements(By.className("thumb"));
 		
-		System.out.println(el1);
+		//System.out.println(el1);
 	}
 
 }
