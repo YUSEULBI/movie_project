@@ -22,5 +22,6 @@
 	<classpathentry kind="lib" path="C:/java-mail.jar"/>
 	<classpathentry kind="lib" path="C:/jsoup.jar"/>
 	<classpathentry kind="lib" path="C:/mysql-connector-j.jar"/>
+	<classpathentry kind="lib" path="C:/selenium-server-4.9.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
