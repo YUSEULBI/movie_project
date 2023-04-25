@@ -167,9 +167,11 @@ public class Test {
 		System.out.println(driver);
 		// class="nav" 인 모든 태그를 가진 WebElement리스트를 받아온다.
 		// WebElement는 html의 태그를 가지는 클래스이다.
-		//List<WebElement> el1 = driver.findElements(By.className("thumb"));
-		
-		//System.out.println(el1);
+		List<WebElement> el1 = driver.findElements(By.className("thumb"));
+		//1초 대기
+		try {Thread.sleep(1000);} catch (InterruptedException e) {}
+		System.out.println(el1.get(0));
+		System.out.println(el1.get(0).getText());
 	}
 
 }
