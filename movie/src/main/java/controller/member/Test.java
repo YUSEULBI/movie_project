@@ -147,31 +147,57 @@ public class Test {
 		
 		// 브라우저가 눈에 보이지 않고 내부적으로 돈다.
 		// 설정하지 않을 시 실제 크롬 창이 생성되고, 어떤 순서로 진행되는지 확인 할 수 있다.
-		options.addArguments("headless");
+		//options.addArguments("headless");
 		
 		// 위에서 설정한 옵션을 담은 드라이버 객체 생성
 		// 옵션을 설정하지 않았을 때에는 생략 가능하다.
 		// WebDriver 객체가 곧 하나의 브라우저 창이라 생각한다.
 		WebDriver driver = new ChromeDriver(options);
 		
+		driver.manage().deleteAllCookies();
+		driver.navigate().refresh();
+		
+		driver.quit();
+		
+		try {
+			System.setProperty(WEB_DRIVER_ID, WEB_DRIVER_PATH);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		WebDriver driver2 = new ChromeDriver(options);
+		
 		// 이동을 원하는 URL
 		String url = "https://kobis.or.kr/kobis/business/mast/mvie/searchMovieList.do?dtTp=movie&dtCd=20112708";
 		
 		// WebDriver을 해당 URL로 이동한다.
-		driver.get(url);
+		try {
+			driver2.get(url);
+			System.out.println(driver2.getPageSource());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			driver.close();
+		}
+		
+		
+		
 		
 		// 브라우저 이동시 생기는 로드시간을 기다린다.
 		// HTTP응답속도보다 자바의 컴파일 속도가 더 빠르기 때문에 임의적으로 1초를 대기한다.
-		try {Thread.sleep(1000); } catch (InterruptedException e) {	}
+		//try {Thread.sleep(1000); } catch (InterruptedException e) {	}
 		
-		System.out.println(driver);
-		// class="nav" 인 모든 태그를 가진 WebElement리스트를 받아온다.
-		// WebElement는 html의 태그를 가지는 클래스이다.
-		List<WebElement> el1 = driver.findElements(By.className("thumb"));
-		//1초 대기
-		try {Thread.sleep(1000);} catch (InterruptedException e) {}
-		System.out.println(el1.get(0));
-		System.out.println(el1.get(0).getText());
+		driver.close();
+		
+			// class="nav" 인 모든 태그를 가진 WebElement리스트를 받아온다.
+			// WebElement는 html의 태그를 가지는 클래스이다.
+		//List<WebElement> el1 = driver.findElements(By.className("info1"));
+		
+			//1초 대기
+		//try {Thread.sleep(1000);} catch (InterruptedException e) {}
+		
+		//System.out.println(el1.get(0));
+		//String text = el1.get(0).getText();
+		//System.out.println(text);
 	}
 
 }
