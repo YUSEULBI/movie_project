@@ -1,7 +1,20 @@
 console.log('test.js연결')
 
+seleniumtest();
+function seleniumtest(){
+	console.log("selenium테스트")
+	$.ajax({
+		url:"/movie/movie/selenium" ,
+		method : "get" ,
+		success: (r)=>{
+			console.log(r)
+		}
+	})
+}
+
+
 // htmlUnit 테스트
-htmlUnitTest();
+//htmlUnitTest();
 function htmlUnitTest(){
 	console.log("htmlUnit테스트")
 	$.ajax({
