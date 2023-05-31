@@ -1,5 +1,19 @@
 console.log('test.js연결')
 
+// htmlUnit 테스트
+htmlUnitTest();
+function htmlUnitTest(){
+	console.log("htmlUnit테스트")
+	$.ajax({
+		url:"/movie/htmlunit" ,
+		method : "get" ,
+		success: (r)=>{
+			console.log(r)
+		}
+	})
+}
+
+
 //test();
 function test(){
 	console.log("test함수실행")
@@ -14,7 +28,7 @@ function test(){
 }
 
 
-testkofic();
+//testkofic();
 function testkofic(){
 	console.log("testkofic함수실행")
 	$.ajax({
