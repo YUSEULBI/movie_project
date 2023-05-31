@@ -20,12 +20,32 @@
 	<classpathentry kind="lib" path="C:/jackson-databind.jar"/>
 	<classpathentry kind="lib" path="C:/java-activation.jar"/>
 	<classpathentry kind="lib" path="C:/java-mail.jar"/>
-	<classpathentry kind="lib" path="C:/jsoup.jar"/>
-	<classpathentry kind="lib" path="C:/mysql-connector-j.jar"/>
-	<classpathentry kind="lib" path="C:/selenium-server-4.9.0.jar"/>
-	<classpathentry kind="lib" path="C:/selenium-api-4.9.0.jar"/>
-	<classpathentry kind="lib" path="C:/selenium-chrome-driver-4.9.0.jar"/>
-	<classpathentry kind="lib" path="C:/selenium-chromium-driver-4.9.0.jar"/>
-	<classpathentry kind="lib" path="C:/selenium-remote-driver-4.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/jsoup.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/mysql-connector-j.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/commons-codec-1.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/commons-io-2.10.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/commons-lang3-3.12.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/commons-net-3.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/commons-text-1.10.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/dec-0.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/htmlunit-3.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/htmlunit-core-js-3.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/htmlunit-cssparser-3.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/htmlunit-xpath-3.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/httpclient-4.5.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/httpcore-4.4.16.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/httpmime-4.5.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/jetty-client-9.4.51.v20230217.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/jetty-http-9.4.51.v20230217.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/jetty-io-9.4.51.v20230217.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/jetty-util-9.4.51.v20230217.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/jsr305-3.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/neko-htmlunit-3.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/salvation2-3.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/spotbugs-annotations-4.7.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/websocket-api-9.4.51.v20230217.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/websocket-client-9.4.51.v20230217.jar"/>
+	<classpathentry kind="lib" path="C:/Users/504/git/movie_project/movie/src/main/webapp/WEB-INF/lib/websocket-common-9.4.51.v20230217.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
