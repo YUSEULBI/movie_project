@@ -13,9 +13,9 @@ public class BoxOffice {
 	
 	public static ArrayList<SearchDto> search() throws IOException {
 		ArrayList<SearchDto> list = new ArrayList<>();
-		System.out.println("a");
+		//System.out.println("a");
 		Document doc = Jsoup.connect("https://pedia.watcha.com/ko-KR").get();
-		System.out.println(doc);
+		//System.out.println(doc);
 		
 		for(int i = 0 ; i < 10 ; i++ ) {
 			// [data-rowindex='0'] = 박스오피스인덱스

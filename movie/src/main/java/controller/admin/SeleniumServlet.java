@@ -3,6 +3,9 @@ package controller.admin;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,6 +14,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import model.dto.admin.MovieSeleniumDto;
 
 
 @WebServlet("/movie/selenium")
@@ -26,16 +31,17 @@ public class SeleniumServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("셀레니움테스트 서블릿 실행");
-		String[] dtCdListString = request.getParameterValues("dtCdList");
-		System.out.println("dtCdListString : "+dtCdListString);
-		// 쉼표(,)로 구분된 문자열을 배열로 분할
-        //String[] cdArray = dtCdListString.split(",");
-        
-        // 배열을 ArrayList로 변환
-        //ArrayList<String> cdList = new ArrayList<>(Arrays.asList(cdArray));
-		/*
+		request.setCharacterEncoding("UTF-8");
+		String moviecdlistString = request.getParameter("moviecdlist");
+		Pattern pattern = Pattern.compile("\\d+");
+		Matcher matcher = pattern.matcher(moviecdlistString);
+		List<String> dtCdList = new ArrayList<>();
+		while (matcher.find()) {
+			dtCdList.add(matcher.group());
+		}
+
 		Selenium selenium = new Selenium();
-		String result = selenium.seleniumtest(cdArray);
+		List<MovieSeleniumDto> result = selenium.seleniumtest(dtCdList);
 		
 		
 		
@@ -44,7 +50,7 @@ public class SeleniumServlet extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("application/json");
 		response.getWriter().print(json);
-		*/
+		
 	}
 
 

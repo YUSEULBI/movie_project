@@ -113,27 +113,57 @@ function kobisBoxOffice(){
 function getBoxOfficePosterSynopsis(){
 	console.log("getBoxOfficePosterSynopsis실행")
 	console.log(kobisBoxOfficeList)
-	let movieCdList = [];
+	let moviecdlist = [];
 	kobisBoxOfficeList.forEach(m=>{
 		console.log("m.movieCd : "+m.movieCd)
-		movieCdList.push(m.movieCd)		
+		moviecdlist.push(m.movieCd)		
 	})
-	console.log("movieCdList : "+ movieCdList);
+	console.log(moviecdlist);
+	console.log(typeof moviecdlist);
 	$.ajax({
 		url:"/movie/movie/selenium" ,
 		method : "get" ,
-		data : {"dtCdList":movieCdList} ,
+		data : {"moviecdlist":JSON.stringify(moviecdlist)} ,
 		success: (r)=>{
 			console.log(r)
+			kobisBoxOfficeList.forEach(m=>{
+				r.forEach(s=>{
+					if(m.movieCd == s.movieCd){ m.imgUrl=s.imgUrl }
+				})
+			})
+			console.log(kobisBoxOfficeList)
+			kobisBoxOfficePrint();
 		}
 	})
 	
 }
 
-
+// kobisBoxOfficePrint
+function kobisBoxOfficePrint(){
+	let html = '';
+	kobisBoxOfficeList.forEach((o,i)=>{
+		html += `
+				<div class="onemovie">
+					<div class="mposter">
+						<img class="boxofficegradient" src="/movie/member/img/mypage/boxofficeshadow.png">
+						<img alt="" src="${o.imgUrl}">
+						<div class="mrank">${o.rank}</div>
+					</div>   
+					<div class="moviename">${o.movieNm}</div>
+				
+					<div class="movieinfo">
+						<div>${o.showCnt}</div>
+						<div>${o.openDt}</div>
+					</div>
+				</div>
+					
+				`
+	})
+	document.querySelector('.boxofficeinfobox').innerHTML = html;
+}
 
 // 박스오피스 영화정보 출력
-boxOfficePrint();
+//boxOfficePrint();
 function boxOfficePrint(){
 	$.ajax({
 		url : "/movie/boxoffice/servlet" ,
