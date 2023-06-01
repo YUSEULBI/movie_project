@@ -19,7 +19,7 @@ public class Selenium {
 		WebDriver webDriver = new ChromeDriver();
 		
 		for( int i = 0 ; i < cdArray.length ; i++ ) { 
-			System.out.println(cdArray[i]);
+			System.out.println("cdArray[i] : "+cdArray[i]);
 		}
 		webDriver.get("https://kobis.or.kr/kobis/business/mast/mvie/searchMovieList.do?dtTp=movie&dtCd="+cdArray[0]);
 		try {

@@ -109,7 +109,7 @@ function kobisBoxOffice(){
 	})
 }
 
-// api당 api와 시놉시스 가져오기
+// api당 포스터이미지 가져오기
 function getBoxOfficePosterSynopsis(){
 	console.log("getBoxOfficePosterSynopsis실행")
 	console.log(kobisBoxOfficeList)

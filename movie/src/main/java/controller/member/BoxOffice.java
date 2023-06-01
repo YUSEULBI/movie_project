@@ -32,35 +32,35 @@ public class BoxOffice {
 			String titleStr = title.text(); 	// 패왕별희
 			String countStr = counts.text();	// 예매율 1.7% ・ 누적 관객 12만명
 			String yearStr = year.text();		// 1993 ・ 중국
-			System.out.println(titleStr); 
-			System.out.println(countStr); 
-			System.out.println(yearStr); 
+			//System.out.println(titleStr); 
+			//System.out.println(countStr); 
+			//System.out.println(yearStr); 
 			
 			// 영화별 상세페이지 링크
 			// 절대 URL을 얻으려면 abs:속성 값이 문서의 기본 URI(원래 위치)에 대해 확인되도록 하는 속성 키 접두사가 있습니다.attr("abs:href")
 			// https://pedia.watcha.com/ko-KR/contents/mJO1awO
 			// String으로 반환
 			String link = doc.select("[data-rowindex='0']").select(".css-8y23cj a").get(i).attr("abs:href");
-			System.out.println(link);
+			//System.out.println(link);
 			
 			//img태그의 src를 웹주소형식으로 가져오기
 			// https://an2-img.amz.wtchn.net/image/v2/T7qP_idp-A7AdHCV6-wZBA.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk5Ea3dlRGN3TUhFNE1DSmRMQ0p3SWpvaUwzWXlMM04wYjNKbEwybHRZV2RsTHpFMk56VTJOVE16TlRNNE9EVTVNVEEyTURVaWZRLmZxSThtNU1jQl9HSDFxQ0plZGlUYUxPa1R4WTVwSC1kZGhNWVhISy16anM
 			// String으로 반환
 			String pimg = doc.select("[data-rowindex='0']").select(".ezcopuc0 img").get(i).attr("abs:src");
-			System.out.println("pimg : "+ pimg);
+			//System.out.println("pimg : "+ pimg);
 			
 			// 영화제목 / 포스터웹주소  / [예매율,누적관객]  / 상세페이지링크 / [개봉연도,개봉나라]
 			SearchDto dto = new SearchDto(titleStr, pimg, countStr, link, yearStr);
 			list.add(dto);
 		}// for문 end
-		System.out.println(list);
+		//System.out.println(list);
 		return list;
 	}
 	
 	public static ArrayList<SearchDto> getnetflixtopten() throws IOException {
 		ArrayList<SearchDto> list = new ArrayList<>();
 		Document doc = Jsoup.connect("https://pedia.watcha.com/ko-KR").get();
-		System.out.println(doc);
+		//System.out.println(doc);
 		
 		for (int i = 0; i < 10; i++) {
         	// [data-rowindex=2] = 넷플릭스 인덱스
@@ -77,7 +77,7 @@ public class BoxOffice {
             SearchDto dto =	new SearchDto(titleStr, pimg, null, null, null);
             list.add(dto);
 		}// for문 end
-		System.out.println(list);
+		//System.out.println(list);
 		return list;
 	}
 	

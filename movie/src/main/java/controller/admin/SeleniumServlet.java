@@ -26,7 +26,7 @@ public class SeleniumServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("셀레니움테스트 서블릿 실행");
-		String dtCdListString = request.getParameter("dtCdList");
+		String[] dtCdListString = request.getParameterValues("dtCdList");
 		System.out.println("dtCdListString : "+dtCdListString);
 		// 쉼표(,)로 구분된 문자열을 배열로 분할
         //String[] cdArray = dtCdListString.split(",");
