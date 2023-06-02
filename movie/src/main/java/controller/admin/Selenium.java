@@ -50,20 +50,20 @@ public class Selenium {
 				dto.setMovieCd(index);
 				dto.setImgUrl(href);
 				
+				// 여러 스레드가 DtoList에 동시에 접근하기 때문에 동기화
 				synchronized (seleniumDtoList) {
 					seleniumDtoList.add(dto);
-					webDriver.quit(); // WebDriver 종료
 				}
-				
+				webDriver.quit(); // WebDriver 종료
 				latch.countDown();
 			});
+			
 			thread.start();
 
 		}
 		
 		// 모든 스레드 완료를 기다림
 		try { latch.await(); } catch (InterruptedException e) { e.printStackTrace(); }
-		
 		
 		
 		System.out.println(seleniumDtoList);
