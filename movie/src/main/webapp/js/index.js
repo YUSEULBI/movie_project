@@ -85,12 +85,13 @@ function kobisBoxOffice(){
 	let today = new Date();
 	//console.log("today : " + today)
 	let yesterday = new Date(today.setDate(today.getDate()-1));
-	//console.log("yesterday : "+yesterday)
+	console.log("yesterday : "+yesterday)
 	
 	let year = yesterday.getFullYear();
 	let month = yesterday.getMonth()+1;
 	if ( month < 10 ){ month = "0"+month }
 	let date = yesterday.getDate();
+	if( date < 10 ){ date = "0"+date }
 	
 	let targetDt = year+month+date
 	console.log("targetDt : "+ targetDt)
@@ -102,6 +103,7 @@ function kobisBoxOffice(){
 		method : "get",
 		success : (r)=>{
 			console.log("api실행")
+			console.log(r)
 			kobisBoxOfficeList = r.boxOfficeResult.dailyBoxOfficeList;
 			getBoxOfficePosterSynopsis();
 		}
