@@ -62,7 +62,6 @@
 	<div style="background-image: "></div>
 	<%@include file="/footer.jsp" %>
 	<script src="/movie/js/index.js" type="text/javascript"></script>
-	
 </body>
 </html>
 

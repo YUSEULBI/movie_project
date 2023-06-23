@@ -105,15 +105,15 @@ function kobisBoxOffice(){
 			console.log("api실행")
 			console.log(r)
 			kobisBoxOfficeList = r.boxOfficeResult.dailyBoxOfficeList;
-			getBoxOfficePosterSynopsis();
+			getBoxOfficePoster();
 		}
 		
 	})
 }
 
 // api당 포스터이미지 가져오기
-function getBoxOfficePosterSynopsis(){
-	console.log("getBoxOfficePosterSynopsis실행")
+function getBoxOfficePoster(){
+	console.log("getBoxOfficePoster실행")
 	console.log(kobisBoxOfficeList)
 	let moviecdlist = [];
 	kobisBoxOfficeList.forEach(m=>{
