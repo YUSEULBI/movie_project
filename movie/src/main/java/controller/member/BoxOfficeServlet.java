@@ -32,11 +32,8 @@ public class BoxOfficeServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int type = Integer.parseInt(request.getParameter("type"));
 		ArrayList<SearchDto> list = new ArrayList<>();
-		if ( type == 1 ) {
-			list = BoxOffice.search();
-		}else if ( type == 2 ) {
-			list = BoxOffice.getnetflixtopten();
-		}
+		if ( type == 1 ) { list = BoxOffice.search(); }
+		else if ( type == 2 ) { list = BoxOffice.getNetflixTopTen(); }
 		ObjectMapper mapper = new ObjectMapper();
 		String jsonArray = mapper.writeValueAsString(list);
 		System.out.println( "jsonArray : "+jsonArray );

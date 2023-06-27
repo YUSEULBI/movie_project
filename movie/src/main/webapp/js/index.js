@@ -144,6 +144,10 @@ function getBoxOfficePoster(){
 function kobisBoxOfficePrint(){
 	let html = '';
 	kobisBoxOfficeList.forEach((o,i)=>{
+		let audience = o.audiAcc;
+		if ( audience >= 10000 ){ 
+			audience = (Math.ceil( audience/10000 ))+"만"; 
+		}
 		html += `
 				<div class="onemovie">
 					<div class="mposter">
@@ -154,8 +158,8 @@ function kobisBoxOfficePrint(){
 					<div class="moviename">${o.movieNm}</div>
 				
 					<div class="movieinfo">
-						<div>${o.showCnt}</div>
-						<div>${o.openDt}</div>
+						<div>예매율 ${o.salesShare}% &nbsp;&nbsp;|&nbsp;&nbsp; 누적관객수 ${audience}명</div>
+						<div>개봉일 ${o.openDt}</div>
 					</div>
 				</div>
 					
@@ -202,22 +206,20 @@ function boxOfficePrint(){
 
 // 넷플릭스top10 영화정보 가져오기
 let netflixtopten = null;
-getnetflixtopten();
-function getnetflixtopten(){
+getNetflixTopTen();
+function getNetflixTopTen(){
 	$.ajax({
 		url : "/movie/boxoffice/servlet" ,
 		method : "get" ,
 		data : {"type":2} ,
 		success : (r)=>{
-			console.log(r)
 			netflixtopten = r;
 			
 			netflixtopten.forEach((o,i)=>{
 				// 객체명.새로운속성명 = 데이터
 				o.rank = i+1;	
 			})
-			console.log(netflixtopten)
-			netflixtoptenprint();
+			netflixTopTenPrint();
 		}
 	})
 }
@@ -238,7 +240,7 @@ function netflixslidermove(no){
 		netflixtopten.splice(0,0,lastnetflixmovie)
 		console.log(netflixtopten)
 		// 출력
-		netflixtoptenprint();
+		netflixTopTenPrint();
 	}
 	if( no == 2 ){
 		let firstnetflixmovie = netflixtopten[0];
@@ -250,12 +252,12 @@ function netflixslidermove(no){
 		//배열명.push(추가할 새로운 요소) : 마지막 인덱스 뒤로추가
 		netflixtopten.push(firstnetflixmovie)
 		// 출력
-		netflixtoptenprint();	
+		netflixTopTenPrint();	
 	}
 	
 }
 
-function netflixtoptenprint(){
+function netflixTopTenPrint(){
 	let html = '';
 	netflixtopten.forEach((o,i)=>{
 		html += `

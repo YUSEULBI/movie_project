@@ -44,8 +44,13 @@ public class SearchDto {
 		this.year = year;
 	}
 
-
-
+	// 넷플릭스 순위 출력용 생성자
+	public SearchDto(String title, String pimg) {
+		super();
+		this.title = title;
+		this.pimg = pimg;
+	}
+	
 
 	@Override
 	public String toString() {
@@ -54,6 +59,11 @@ public class SearchDto {
 				+ infotime + ", infogenre=" + infogenre + ", infocountry=" + infocountry + ", infoold=" + infoold
 				+ ", infocontent=" + infocontent + "]";
 	}
+
+
+
+
+
 
 
 

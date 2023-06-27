@@ -57,7 +57,9 @@ public class BoxOffice {
 		return list;
 	}
 	
-	public static ArrayList<SearchDto> getnetflixtopten() throws IOException {
+	// [data-rowindex=2] = 넷플릭스 인덱스
+	
+	public static ArrayList<SearchDto> getNetflixTopTen() throws IOException {
 		ArrayList<SearchDto> list = new ArrayList<>();
 		Document doc = Jsoup.connect("https://pedia.watcha.com/ko-KR").get();
 		//System.out.println(doc);
@@ -68,13 +70,10 @@ public class BoxOffice {
         	//Element year = doc.select("[data-rowindex=2]").select(".css-1rxwuxd").get(i);
         	
         	String titleStr = title.text();
-        	//String yearStr = year.text();
                        
-            // String link = doc.select("[data-rowindex=2]").select(".css-8y23cj a").get(i).attr("abs:href");
             //  System.out.println("link : "+link);
             String pimg = doc.select("[data-rowindex=2]").select(".ezcopuc0 img").get(i).attr("abs:src");
-            //  System.out.println("pimg : "+ pimg);
-            SearchDto dto =	new SearchDto(titleStr, pimg, null, null, null);
+            SearchDto dto =	new SearchDto(titleStr, pimg);
             list.add(dto);
 		}// for문 end
 		//System.out.println(list);
