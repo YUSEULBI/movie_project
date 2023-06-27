@@ -62,21 +62,14 @@ public class BoxOffice {
 	public static ArrayList<SearchDto> getNetflixTopTen() throws IOException {
 		ArrayList<SearchDto> list = new ArrayList<>();
 		Document doc = Jsoup.connect("https://pedia.watcha.com/ko-KR").get();
-		//System.out.println(doc);
-		
 		for (int i = 0; i < 10; i++) {
-        	// [data-rowindex=2] = 넷플릭스 인덱스
         	Element title = doc.select("[data-rowindex=2]").select(".css-5yuqaa").get(i);
-        	//Element year = doc.select("[data-rowindex=2]").select(".css-1rxwuxd").get(i);
-        	
         	String titleStr = title.text();
                        
-            //  System.out.println("link : "+link);
             String pimg = doc.select("[data-rowindex=2]").select(".ezcopuc0 img").get(i).attr("abs:src");
             SearchDto dto =	new SearchDto(titleStr, pimg);
             list.add(dto);
 		}// for문 end
-		//System.out.println(list);
 		return list;
 	}
 	

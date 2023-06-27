@@ -36,7 +36,6 @@ public class BoxOfficeServlet extends HttpServlet {
 		else if ( type == 2 ) { list = BoxOffice.getNetflixTopTen(); }
 		ObjectMapper mapper = new ObjectMapper();
 		String jsonArray = mapper.writeValueAsString(list);
-		System.out.println( "jsonArray : "+jsonArray );
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("application/json");
 		response.getWriter().print(jsonArray);
